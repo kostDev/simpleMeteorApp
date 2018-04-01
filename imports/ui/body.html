@@ -1,0 +1,20 @@
+<body>
+    <div class="container" id="style-2">
+        <ul>
+            {{#each messages}} {{> message}} {{/each}}
+        </ul>
+    </div>
+    <form class="new-messages">
+        <input type="text" name="text" class="my-input" placeholder="Write a message..." />
+    </form>
+</body>
+
+<template name="message">
+    <li class="{{#if isBot}}
+        bot
+    {{else}}
+        notBot
+    {{/if}}"
+    
+    >{{from}}: {{text}}</li>
+</template>
